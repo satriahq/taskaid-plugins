@@ -4,7 +4,7 @@ Plugins that connect AI assistants and coding tools to [Taskaid](https://taskaid
 
 Taskaid is task management between you and your agents. Work, context and next steps stay connected across conversations and assistants. In a coding tool, the agent can park something you noticed mid-change as a task with a day on it, pick a task up by its reference and carry on from its note, and mark it done when the fix is merged.
 
-**Connection.** The plugin talks only to taskaid.ai: the MCP server at `https://taskaid.ai/mcp`, and Taskaid's OAuth sign-in under `https://taskaid.ai/.well-known/` and `https://taskaid.ai/oauth/`. You sign in with your Taskaid account in the browser; there's no API key, and the plugin stores no credentials.
+**Connection.** The plugin talks only to taskaid.ai: the MCP server at `https://taskaid.ai/mcp`, and Taskaid's OAuth sign-in under `https://taskaid.ai/.well-known/` and `https://taskaid.ai/oauth/`. You sign in with your Taskaid account in the browser; there's no API key, and the plugin stores no credentials. Each action runs as your own account, limited to what you approved.
 
 ## Cursor
 

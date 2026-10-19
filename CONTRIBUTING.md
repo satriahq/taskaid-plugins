@@ -36,6 +36,6 @@ A `taskaid` server added with `grok mcp add` shares its name and sign-in with th
 Merging here publishes nothing.
 
 - **Cursor:** the first listing is the team's application at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), made while signed in to cursor.com as the team that owns it. Later updates and new plugins need no new application: ask Cursor to re-index. Questions go to marketplace-publishing@cursor.com.
-- **Grok Build:** the listing is an entry in xAI's [plugin marketplace](https://github.com/xai-org/plugin-marketplace) that points at this repository, pinned to a commit. When `version` changes, xAI's bot moves the pin.
+- **Grok Build:** the listing is an entry in xAI's [plugin marketplace](https://github.com/xai-org/plugin-marketplace) that points at this repository, pinned to a commit. When `version` changes, xAI's bot opens a pull request to move the pin; users get the update once xAI reviews and merges it.
 
 Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest formats are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins) and xAI's [marketplace README](https://github.com/xai-org/plugin-marketplace#readme).

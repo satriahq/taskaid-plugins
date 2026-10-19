@@ -26,4 +26,6 @@ Copy rather than symlink: Cursor skips a symlink to a folder outside its local p
 
 ## Submit
 
-Merging here publishes nothing. Submit the repository at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). The manifest format and Cursor's submission checklist are in the [plugin reference](https://cursor.com/docs/reference/plugins).
+Merging here publishes nothing. The first submission is an application at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), made while signed in to cursor.com as the team that owns the listing. Updates and new plugins need no new application: ask Cursor to re-index instead. Questions go to marketplace-publishing@cursor.com.
+
+The manifest format and Cursor's submission checklist are in the [plugin reference](https://cursor.com/docs/reference/plugins).

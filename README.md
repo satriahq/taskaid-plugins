@@ -14,6 +14,8 @@ To disconnect, turn the plugin off under **Customize** in Cursor, or open [Setti
 
 For prompts to try and troubleshooting, see [Taskaid for Cursor](https://taskaid.ai/integrations/cursor). For the tools, see the [MCP server reference](https://taskaid.ai/docs/mcp).
 
+Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) cover your use of the plugin.
+
 ## License
 
 [MIT](LICENSE)

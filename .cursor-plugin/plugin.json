@@ -2,7 +2,7 @@
   "name": "taskaid",
   "displayName": "Taskaid",
   "version": "0.1.0",
-  "description": "Manage Taskaid tasks, lists, and daily plans through the hosted Taskaid MCP server.",
+  "description": "Task management between you and your agents. Keep work, context and next steps connected across conversations and assistants.",
   "author": {
     "name": "Satria Technologies Private Limited"
   },

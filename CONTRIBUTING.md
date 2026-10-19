@@ -1,10 +1,10 @@
 # Contributing
 
-Cursor reviews the plugin before listing it and reviews each update before publishing it, so test a change in Cursor before submitting it.
+Cursor reviews every update before publishing it, so test each change in Cursor first.
 
-## Test locally
+## Test in Cursor
 
-1. From the repository root, copy the plugin into Cursor's local plugins folder:
+1. From the repository root, copy the plugin into Cursor's local plugins folder. Copy rather than symlink: Cursor skips a symlink to a folder outside it.
 
    ```sh
    mkdir -p "$HOME/.cursor/plugins/local/taskaid"
@@ -12,18 +12,16 @@ Cursor reviews the plugin before listing it and reviews each update before publi
      "$HOME/.cursor/plugins/local/taskaid/"
    ```
 
-2. Run **Developer: Reload Window**, open **Customize** and check that Taskaid and its MCP server appear.
-3. Sign in to Taskaid when prompted and approve the connection.
+2. Run **Developer: Reload Window**. Taskaid appears in **Customize** as a **Local** plugin.
+3. Open its MCP server. If Taskaid is also in `mcp.json`, choose **Plugin** as the source. Uninstall any Marketplace copy, which takes precedence over a local one.
+4. Choose **Authenticate**, approve on Taskaid, and check that the tools are listed.
+5. In Agent chat, open a task by its reference, then create a task, add to its note and complete it. Check the changes in Taskaid.
+6. Turn the server off and on again and check that it reconnects.
 
-Copy rather than symlink: Cursor skips a symlink to a folder outside its local plugins folder. On Teams and Enterprise, an admin may need to turn on **Allow Local Plugin Imports**. Disable any Marketplace copy of the plugin, which takes precedence over the local one, and any Taskaid entry in `mcp.json`, so the test exercises the plugin's own connection.
+On Teams and Enterprise, an admin may need to turn on **Allow Local Plugin Imports**.
 
-## Before submitting
+## Publish
 
-- Taskaid's tools appear, and sign-in connects the account you intended.
-- The agent can read your tasks and open one by its reference.
-- It can create a task, add to its note and complete it, and the changes show in Taskaid.
-- After turning the plugin off and on again, it reconnects.
+Merging here publishes nothing. The first listing is the team's application at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), made while signed in to cursor.com as the team that owns it. Later updates and new plugins need no new application: ask Cursor to re-index. Questions go to marketplace-publishing@cursor.com.
 
-## Submit
-
-Merging here publishes nothing. Submit the repository at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish). The manifest format and Cursor's submission checklist are in the [plugin reference](https://cursor.com/docs/reference/plugins).
+Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest format and the submission checklist are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins).

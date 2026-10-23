@@ -20,9 +20,14 @@ If you added Taskaid to `mcp.json` before, Cursor treats that entry and the plug
 1. Add Taskaid from the xAI Official marketplace: type `/marketplace` in Grok Build, or run `grok plugin install taskaid --trust`.
 2. In a session, open `/mcps`, select **taskaid**, press `i` and approve the access you want to grant.
 
+## Gemini CLI
+
+1. Install the extension: `gemini extensions install https://github.com/satriahq/taskaid-plugins`.
+2. In a session, run `/mcp auth taskaid` and approve the access you want to grant.
+
 ## Disconnect
 
-Log out of the server in Cursor's **Customize**, or run `grok plugin uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
+Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, or run `gemini extensions uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
 

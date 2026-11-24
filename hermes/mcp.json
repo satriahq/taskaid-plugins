@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "taskaid": {
+      "type": "streamable-http",
+      "url": "https://taskaid.ai/mcp"
+    }
+  }
+}

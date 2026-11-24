@@ -25,9 +25,16 @@ If you added Taskaid to `mcp.json` before, Cursor treats that entry and the plug
 1. Install the extension: `gemini extensions install https://github.com/satriahq/taskaid-plugins`.
 2. In a session, run `/mcp auth taskaid` and approve the access you want to grant.
 
+## Hermes Agent
+
+1. Install the plugin: `hermes plugins install taskaid --enable`.
+2. Sign in with `hermes mcp add taskaid --url https://taskaid.ai/mcp --auth oauth --connect-timeout 300` and approve the access you want to grant.
+
+[The plugin's README](hermes/README.md) adds Taskaid's skills, and [Taskaid for Hermes Agent](https://taskaid.ai/integrations/hermes) has prompts to try and troubleshooting.
+
 ## Disconnect
 
-Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, or run `gemini extensions uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
+Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid` or `gemini extensions uninstall taskaid`, or run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
 

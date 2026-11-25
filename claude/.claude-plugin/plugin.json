@@ -1,0 +1,18 @@
+{
+  "name": "taskaid",
+  "displayName": "Taskaid",
+  "version": "0.1.0",
+  "description": "Task management between you and your agents. Keep work, context and next steps connected across conversations and assistants.",
+  "author": {
+    "name": "Satria Technologies Private Limited"
+  },
+  "homepage": "https://taskaid.ai",
+  "repository": "https://github.com/satriahq/taskaid-plugins",
+  "license": "MIT",
+  "keywords": ["taskaid", "tasks", "productivity", "planning", "mcp"],
+  "icon": "./assets/taskaid.png",
+  "documentationUrl": "https://taskaid.ai/integrations/claude",
+  "supportUrl": "https://taskaid.ai/support",
+  "privacyPolicyUrl": "https://taskaid.ai/privacy",
+  "termsOfServiceUrl": "https://taskaid.ai/terms"
+}

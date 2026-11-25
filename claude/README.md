@@ -8,8 +8,9 @@ Taskaid is task management between you and your agents. Work, context and next s
 
 ## Set up
 
-1. Add Taskaid from Claude's directory. Claude Code picks it up from the same account.
-2. When Claude first connects, sign in to Taskaid and approve the access you want to grant.
+1. Add Taskaid from Claude's directory.
+2. On claude.ai and in Cowork, open the plugin's **Connectors** tab and add or connect **taskaid**, then sign in to Taskaid and approve the access you want to grant. On Team and Enterprise plans, an Owner adds the connector for the organization first, and each member then connects their own account.
+3. Claude Code picks the plugin up from the same account and connects to the server itself: open `/mcp` and sign in to Taskaid there too.
 
 If you already added Taskaid as a connector, the plugin points at the same server, so you see one set of tools.
 
@@ -23,7 +24,7 @@ If you already added Taskaid as a connector, the plugin points at the same serve
 
 ## Disconnect
 
-Remove Taskaid in Claude, then disconnect Claude under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
+Remove Taskaid in Claude. Then, under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings), disconnect **Claude**, and **Claude Code** too if you signed in there: Taskaid revokes each app's access separately.
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
 

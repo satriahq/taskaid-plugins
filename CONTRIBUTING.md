@@ -68,7 +68,7 @@ Antigravity names the server `taskaid_taskaid`, the same name an imported Gemini
 
 ## Publish
 
-Merging here publishes nothing.
+Merging here publishes nothing, with one exception: Claude's directory tracks `main`, so once auto-publish is on for that listing, a merged change that passes the directory's scan goes live without another step.
 
 - **Cursor:** the first listing is the team's application at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), made while signed in to cursor.com as the team that owns it. Later updates and new plugins need no new application: ask Cursor to re-index. Questions go to marketplace-publishing@cursor.com.
 - **Grok Build:** the listing is an entry in xAI's [plugin marketplace](https://github.com/xai-org/plugin-marketplace) that points at this repository, pinned to a commit. When `version` changes, xAI's bot opens a pull request to move the pin; users get the update once xAI reviews and merges it.

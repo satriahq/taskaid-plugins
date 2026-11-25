@@ -48,7 +48,7 @@ Antigravity names the server `taskaid_taskaid`, the same name an imported Gemini
 3. Start a session with `claude --plugin-dir ./claude`, open `/mcp`, sign in to the plugin's `taskaid` server and approve on Taskaid.
 4. Open a task by its reference, then create a task, add to its note and complete it. Check the changes in Taskaid.
 
-`--plugin-dir` loads the plugin for that session only, so there's nothing to remove afterwards. The plugin bundles no skills: Taskaid's server serves them over MCP itself.
+`--plugin-dir` loads the plugin for that session only, so there's nothing to remove afterwards. If your Claude account has Taskaid connected on claude.ai, Claude Code also lists it as `claude.ai Taskaid`, beside the plugin's `plugin:taskaid:taskaid`, and signing in to both shows each tool twice. The plugin bundles no skills: Taskaid's server serves them over MCP itself.
 
 ## Test in Hermes Agent
 

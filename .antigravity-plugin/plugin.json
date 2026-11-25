@@ -1,0 +1,20 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "taskaid",
+  "displayName": "Taskaid",
+  "version": "0.1.0",
+  "description": "Task management between you and your agents. Keep work, context and next steps connected across conversations and assistants.",
+  "author": {
+    "name": "Satria Technologies Private Limited"
+  },
+  "homepage": "https://taskaid.ai",
+  "repository": "https://github.com/satriahq/taskaid-plugins",
+  "license": "MIT",
+  "logo": "assets/taskaid.png",
+  "keywords": ["taskaid", "tasks", "productivity", "planning", "mcp"],
+  "suggestedPrompts": [
+    "Show my tasks for today",
+    "Add a task to remove the old config path after this ships, next Friday",
+    "Find my task for this work and carry on from its note"
+  ]
+}

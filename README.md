@@ -25,6 +25,13 @@ If you added Taskaid to `mcp.json` before, Cursor treats that entry and the plug
 1. Install the extension: `gemini extensions install https://github.com/satriahq/taskaid-plugins`.
 2. In a session, run `/mcp auth taskaid` and approve the access you want to grant.
 
+## Google Antigravity
+
+1. Install the plugin: `agy plugin install https://github.com/satriahq/taskaid-plugins`.
+2. In `agy`, open `/plugin`, expand **taskaid** under **Installed** and choose **Sign in**; the Antigravity app opens the sign-in itself when the server first connects. Approve the access you want to grant. In `agy`, paste the code Antigravity's page then shows.
+
+The server is named **taskaid_taskaid**, as it is when `agy plugin import gemini` brings over the Gemini CLI extension. [Taskaid for Google Antigravity](https://taskaid.ai/integrations/antigravity) has prompts to try and troubleshooting.
+
 ## Hermes Agent
 
 1. Install the plugin: `hermes plugins install taskaid --enable`.
@@ -34,7 +41,7 @@ If you added Taskaid to `mcp.json` before, Cursor treats that entry and the plug
 
 ## Disconnect
 
-Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid` or `gemini extensions uninstall taskaid`, or run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings).
+Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, or run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity, do that too, since it keeps its sign-in after the plugin is gone.
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
 

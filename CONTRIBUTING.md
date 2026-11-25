@@ -1,8 +1,8 @@
 # Contributing
 
-Cursor, xAI and Nous Research review every update before users get it, so test each change in all three first.
+Cursor, xAI and Nous Research review every update before users get it, so test each change in every client first.
 
-Each client reads its own manifest: `.cursor-plugin/plugin.json` for Cursor, `.grok-plugin/plugin.json` for Grok Build and `hermes/plugin.json` for Hermes Agent. Cursor and Grok Build share the root `mcp.json`. Hermes reads `hermes/mcp.json`, because it accepts only the Agent Plugins format, with a `$schema` and a `type` on each server. Keep the fields the manifests share identical, `version` included, and both `mcp.json` files on the same URL.
+Each client reads its own manifest: `.cursor-plugin/plugin.json` for Cursor, `.grok-plugin/plugin.json` for Grok Build, `.antigravity-plugin/plugin.json` for Google Antigravity and `hermes/plugin.json` for Hermes Agent. Cursor and Grok Build share the root `mcp.json`. Antigravity reads only `mcp_config.json`. Hermes reads `hermes/mcp.json`, because it accepts only the Agent Plugins format, with a `$schema` and a `type` on each server. Keep the fields the manifests share identical, `version` included, and all three server files on the same URL.
 
 ## Test in Cursor
 
@@ -31,6 +31,16 @@ On Teams and Enterprise, an admin may need to turn on **Allow Local Plugin Impor
 
 A `taskaid` server added with `grok mcp add` shares its name and sign-in with the plugin's, so Grok runs one of them. `grok mcp doctor` doesn't list servers from plugins installed through Grok; a session's debug log does (`grok --debug-file <file>`, then look for `source="plugin:taskaid"`).
 
+## Test in Google Antigravity
+
+1. Run `agy plugin validate .` and check that it passes with one warning: `mcp.json` is never loaded. That file is Cursor's and Grok Build's, so `--strict` fails here by design.
+2. Install from the repository root with `agy plugin install .`, then check that `agy plugin list` shows the `taskaid` server.
+3. In `agy`, open `/plugin`, expand **taskaid** under **Installed** and choose **Sign in**. Approve on Taskaid and paste the code Antigravity's page shows.
+4. In a session, open a task by its reference, then create a task, add to its note and complete it. Check the changes in Taskaid.
+5. Remove the local copy with `agy plugin uninstall taskaid`.
+
+Antigravity names the server `taskaid_taskaid`, the same name an imported Gemini CLI extension gets, and keeps sign-ins by server URL, so the two share one sign-in.
+
 ## Test in Hermes Agent
 
 1. Run `hermes plugins validate hermes --install-deps` and check that it passes. The catalog's CI runs the same check.
@@ -53,6 +63,7 @@ Merging here publishes nothing.
 
 - **Cursor:** the first listing is the team's application at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish), made while signed in to cursor.com as the team that owns it. Later updates and new plugins need no new application: ask Cursor to re-index. Questions go to marketplace-publishing@cursor.com.
 - **Grok Build:** the listing is an entry in xAI's [plugin marketplace](https://github.com/xai-org/plugin-marketplace) that points at this repository, pinned to a commit. When `version` changes, xAI's bot opens a pull request to move the pin; users get the update once xAI reviews and merges it.
+- **Google Antigravity:** the listing starts with Google's [plugin interest form](https://forms.gle/2EX5RFYPoJe1UgxR9), for a plugin that passes `agy plugin validate`. Google builds the Marketplace bundle itself, promoting `.antigravity-plugin/plugin.json` to the root.
 - **Hermes Agent:** the listing is `plugin-catalog/taskaid.yaml` in Nous Research's [hermes-agent](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog) repository, pinned to a full commit of this repository with `subdir: hermes`. Moving the pin is a new pull request there, opened by an owner or major contributor of this repository, and Nous reviews the commits it adopts. Users get the update once it's merged and they run `hermes plugins update taskaid`. The Marketplace page shows `hermes/README.md` at the pinned commit.
 
-Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest formats are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins), xAI's [marketplace README](https://github.com/xai-org/plugin-marketplace#readme) and Hermes's [plugin guide](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins), whose catalog rules are in [Submitting to the plugin catalog](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission).
+Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest formats are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins), xAI's [marketplace README](https://github.com/xai-org/plugin-marketplace#readme), Antigravity's [Build plugins](https://antigravity.google/docs/build-plugins) guide and Hermes's [plugin guide](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins), whose catalog rules are in [Submitting to the plugin catalog](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission).

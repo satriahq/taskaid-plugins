@@ -2,7 +2,7 @@
 
 Cursor, xAI and Nous Research review every update before users get it, so test each change in every client first.
 
-Each client reads its own manifest: `.cursor-plugin/plugin.json` for Cursor, `.grok-plugin/plugin.json` for Grok Build, `.antigravity-plugin/plugin.json` for Google Antigravity and `hermes/plugin.json` for Hermes Agent. Cursor and Grok Build share the root `mcp.json`. Antigravity reads only `mcp_config.json`. Hermes reads `hermes/mcp.json`, because it accepts only the Agent Plugins format, with a `$schema` and a `type` on each server. Keep the fields the manifests share identical, `version` included, and all three server files on the same URL.
+Each client reads its own manifest: `.cursor-plugin/plugin.json` for Cursor, `.grok-plugin/plugin.json` for Grok Build, `.antigravity-plugin/plugin.json` for Google Antigravity and `hermes/plugin.json` for Hermes Agent. Cursor and Grok Build share the root `mcp.json`. Antigravity reads only `mcp_config.json`. Hermes reads `hermes/mcp.json`, because it accepts only the Agent Plugins format, with a `$schema` and a `type` on each server. Keep the fields the manifests share identical, `version` included, and all three server files on the same URL. The one exception is Antigravity's `logo`: its Marketplace asks for transparent padding around the mark, so it uses `assets/taskaid-transparent.png`.
 
 ## Test in Cursor
 
@@ -34,7 +34,7 @@ A `taskaid` server added with `grok mcp add` shares its name and sign-in with th
 ## Test in Google Antigravity
 
 1. Run `agy plugin validate .` and check that it passes with one warning: `mcp.json` is never loaded. That file is Cursor's and Grok Build's, so `--strict` fails here by design.
-2. Install from the repository root with `agy plugin install .`, then check that `agy plugin list` shows the `taskaid` server.
+2. Install from the repository root with `agy plugin install .`, then check that `mcpServers` in `agy plugin list --json` lists `taskaid`.
 3. In `agy`, open `/plugin`, expand **taskaid** under **Installed** and choose **Sign in**. Approve on Taskaid and paste the code Antigravity's page shows.
 4. In a session, open a task by its reference, then create a task, add to its note and complete it. Check the changes in Taskaid.
 5. Remove the local copy with `agy plugin uninstall taskaid`.

@@ -10,7 +10,7 @@
   "homepage": "https://taskaid.ai",
   "repository": "https://github.com/satriahq/taskaid-plugins",
   "license": "MIT",
-  "logo": "assets/taskaid.png",
+  "logo": "assets/taskaid-transparent.png",
   "keywords": ["taskaid", "tasks", "productivity", "planning", "mcp"],
   "suggestedPrompts": [
     "Show my tasks for today",

@@ -48,7 +48,7 @@ The server is named **taskaid_taskaid**, as it is when `agy plugin import gemini
 
 ## Disconnect
 
-Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`, or remove `taskaid` from Kiro's MCP configuration. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity, do that too, since it keeps its sign-in after the plugin is gone.
+Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`, or remove `taskaid` from Kiro's MCP configuration. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity and Kiro, do that too, since both keep their sign-in after Taskaid is removed.
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
 

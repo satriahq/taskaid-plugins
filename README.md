@@ -39,11 +39,24 @@ The server is named **taskaid_taskaid**, as it is when `agy plugin import gemini
 
 [The plugin's README](hermes/README.md) adds Taskaid's skills, and [Taskaid for Hermes Agent](https://taskaid.ai/integrations/hermes) has prompts to try and troubleshooting.
 
+## Kiro
+
+[![Add to Kiro](https://kiro.dev/images/add-to-kiro.svg)](https://kiro.dev/launch/mcp/add?name=taskaid&config=%7B%22url%22%3A%22https%3A%2F%2Ftaskaid.ai%2Fmcp%22%7D)
+
+1. Choose **Add to Kiro**, or add `"taskaid": { "url": "https://taskaid.ai/mcp" }` under `mcpServers` in Kiro's MCP configuration.
+2. Under **MCP Servers** in Kiro's panel, choose **Authenticate** on **taskaid**, then **Open** to let Kiro open the sign-in in your browser. Approve the access you want to grant.
+
+[Taskaid for Kiro](https://taskaid.ai/integrations/kiro) has prompts to try and troubleshooting.
+
 ## Disconnect
 
-Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, or run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity, do that too, since it keeps its sign-in after the plugin is gone.
+Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`, or remove `taskaid` from Kiro's MCP configuration. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity and Kiro, do that too, since both keep their sign-in after Taskaid is removed.
 
 The [MCP server reference](https://taskaid.ai/docs/mcp) describes the tools. Taskaid's [Privacy Policy](https://taskaid.ai/privacy) and [Terms of Service](https://taskaid.ai/terms) apply.
+
+## Support
+
+Write to [support@taskaid.ai](mailto:support@taskaid.ai) or use [taskaid.ai/support](https://taskaid.ai/support).
 
 ## License
 

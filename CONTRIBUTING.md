@@ -66,6 +66,15 @@ Antigravity names the server `taskaid_taskaid`, the same name an imported Gemini
 
 `hermes mcp list` and `hermes mcp login` see only servers in `config.yaml`, not the plugin's, which is why step 3 adds the server there. On macOS, servers named `Taskaid` and `taskaid` share one saved sign-in, because their token files differ only in case.
 
+## Test in Kiro
+
+Kiro installs the server from the README's **Add to Kiro** link; nothing in this repository is packaged for it.
+
+1. Open the link in a browser and let it open Kiro. On macOS, the link reaches Kiro only when the app is in an Applications folder.
+2. Under **MCP Servers**, choose **Authenticate** on **taskaid**, then **Open**, and approve on Taskaid.
+3. In chat, ask for today's tasks, allow the tool calls, and check that they succeed.
+4. Remove `taskaid` from Kiro's MCP configuration and disconnect Kiro under **Connected apps** in Taskaid's Settings.
+
 ## Publish
 
 Merging here publishes nothing, with one exception: Claude's directory tracks `main`, so once auto-publish is on for that listing, a merged change that passes the directory's scan goes live without another step.
@@ -75,5 +84,6 @@ Merging here publishes nothing, with one exception: Claude's directory tracks `m
 - **Google Antigravity:** the listing starts with Google's [plugin interest form](https://forms.gle/2EX5RFYPoJe1UgxR9), for a plugin that passes `agy plugin validate`. Google builds the Marketplace bundle itself, promoting `.antigravity-plugin/plugin.json` to the root.
 - **Claude:** the listing is a plugin-bundle submission in Anthropic's [developer portal](https://claude.ai/directory/manage) for this repository with plugin path `claude`, made from the Satria organization on claude.ai, whose connected GitHub account must be able to push here. The directory follows `main`, scans each new commit, and publishes a version that passes according to the listing's publish setting. Taskaid's MCP connector is a separate listing from the same organization, and the two can be paired.
 - **Hermes Agent:** the listing is `plugin-catalog/taskaid.yaml` in Nous Research's [hermes-agent](https://github.com/NousResearch/hermes-agent/tree/main/plugin-catalog) repository, pinned to a full commit of this repository with `subdir: hermes`. Moving the pin is a new pull request there, opened by an owner or major contributor of this repository, and Nous reviews the commits it adopts. Users get the update once it's merged and they run `hermes plugins update taskaid`. The Marketplace page shows `hermes/README.md` at the pinned commit.
+- **Kiro:** the listing is an MCP server submission at [kiro.dev/registry/submit](https://kiro.dev/registry/submit/) for this repository, with the server's config `{"url":"https://taskaid.ai/mcp"}`. Kiro's registry asks the README to keep the one-click **Add to Kiro** link, a privacy policy link and a support contact.
 
-Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest formats are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins), xAI's [marketplace README](https://github.com/xai-org/plugin-marketplace#readme), Antigravity's [Build plugins](https://antigravity.google/docs/build-plugins) guide, Claude's [plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference) and [pre-submission checklist](https://claude.com/docs/plugins/pre-submission-checklist), and Hermes's [plugin guide](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins), whose catalog rules are in [Submitting to the plugin catalog](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission).
+Cursor's Publisher Terms bind every update: the plugin stays free to use, and the README keeps linking Taskaid's Privacy Policy and Terms of Service. The manifest formats are in Cursor's [plugin reference](https://cursor.com/docs/reference/plugins), xAI's [marketplace README](https://github.com/xai-org/plugin-marketplace#readme), Antigravity's [Build plugins](https://antigravity.google/docs/build-plugins) guide, Claude's [plugin manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference) and [pre-submission checklist](https://claude.com/docs/plugins/pre-submission-checklist), Hermes's [plugin guide](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins), whose catalog rules are in [Submitting to the plugin catalog](https://hermes-agent.nousresearch.com/docs/developer-guide/plugins/catalog-submission), and Kiro's [Share an MCP server](https://kiro.dev/docs/mcp/share/).

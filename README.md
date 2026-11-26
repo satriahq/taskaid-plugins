@@ -46,6 +46,8 @@ The server is named **taskaid_taskaid**, as it is when `agy plugin import gemini
 1. Choose **Add to Kiro**, or add `"taskaid": { "url": "https://taskaid.ai/mcp" }` under `mcpServers` in Kiro's MCP configuration.
 2. Under **MCP Servers** in Kiro's panel, choose **Authenticate** on **taskaid**, then **Open** to let Kiro open the sign-in in your browser. Approve the access you want to grant.
 
+[Taskaid for Kiro](https://taskaid.ai/integrations/kiro) has prompts to try and troubleshooting.
+
 ## Disconnect
 
 Log out of the server in Cursor's **Customize**, run `grok plugin uninstall taskaid`, `gemini extensions uninstall taskaid` or `agy plugin uninstall taskaid`, run `hermes mcp remove taskaid` and `hermes plugins uninstall taskaid`, or remove `taskaid` from Kiro's MCP configuration. You can also disconnect an app under **Connected apps** in Taskaid's [Settings](https://taskaid.ai/settings); for Antigravity and Kiro, do that too, since both keep their sign-in after Taskaid is removed.
